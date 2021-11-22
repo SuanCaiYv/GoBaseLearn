@@ -11,6 +11,8 @@ import (
 这里指出了如何创建一个变量，以及之后怎么初始化它，还有"象鼻命名法"的使用
 Go里有四种生命一个变量的方式：var, const, type, func
 func声明一个函数变量，type声明一个新的类型，const声明一个常量
+
+在这里回答一个我好久的疑问，就是var user1 User等价于user2 := User{}，他们都是仅声明，然后对字段赋零值。
 */
 func Chap2() {
 	var val1 = 1
