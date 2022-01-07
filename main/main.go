@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"unsafe"
+	"time"
 )
 
 /*
@@ -10,17 +10,11 @@ import (
 */
 
 func main() {
-	type T struct {
-		a int8
-		b int32
-		c int16
-		d int64
-		e int16
-	}
-	t := T{}
-	fmt.Println(unsafe.Alignof(t.a))
-	fmt.Println(unsafe.Alignof(t.b))
-	fmt.Println(unsafe.Alignof(t.c))
-	fmt.Println(unsafe.Alignof(t.d))
-	fmt.Println(unsafe.Sizeof(t))
+	timeout := make(chan struct{}, 1)
+	go func() {
+		time.Sleep(3 * time.Second)
+		timeout <- struct{}{}
+	}()
+	<-timeout
+	fmt.Println("run")
 }
