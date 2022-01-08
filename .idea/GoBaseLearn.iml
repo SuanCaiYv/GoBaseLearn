@@ -2,7 +2,11 @@
 <module type="WEB_MODULE" version="4">
   <component name="Go" enabled="true" />
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdC/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/cmake-build-debug/CMakeFiles/CMakeTmp" />
+      <excludeFolder url="file://$MODULE_DIR$/cmake-build-debug/CMakeFiles/GoBaseLearn.dir" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
