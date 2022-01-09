@@ -1,7 +1,8 @@
 package main
 
-import "GoBaseLearn/advance"
+import "GoBaseLearn/advance/c_go"
 
 func main() {
-	advance.CGo1()
+	c_go.CGo1()
+	c_go.CGo2()
 }
