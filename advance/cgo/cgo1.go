@@ -1,4 +1,4 @@
-package c_go
+package cgo
 
 /*
 #include <stdio.h>

@@ -1,9 +1,10 @@
-package c_go
+package cgo
 
 /*
 #include "c_go_t2.h"
 */
 import "C"
+
 import "fmt"
 
 func CGo2() {

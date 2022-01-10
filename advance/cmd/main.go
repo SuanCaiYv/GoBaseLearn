@@ -1,8 +1,15 @@
 package main
 
-import "GoBaseLearn/advance/c_go"
+/*
+void print_str_c();
+
+void receive_str();
+*/
+import "C"
+import "GoBaseLearn/advance/cgo"
 
 func main() {
-	c_go.CGo1()
-	c_go.CGo2()
+	// cgo.CGo1()
+	// cgo.CGo2()
+	cgo.CGo3()
 }
