@@ -1,15 +1,7 @@
 package main
 
-/*
-void print_str_c();
-
-void receive_str();
-*/
-import "C"
-import "GoBaseLearn/advance/cgo"
+import "GoBaseLearn/advance/asm"
 
 func main() {
-	// cgo.CGo1()
-	// cgo.CGo2()
-	cgo.CGo3()
+	asm.RunAsm1()
 }
