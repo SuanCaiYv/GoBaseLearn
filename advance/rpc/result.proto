@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "google/protobuf/any.proto";
+import "google/protobuf/timestamp.proto";
+
+option go_package = "./";
+
+message result {
+    int32 code = 1;
+    string msg = 2;
+    google.protobuf.Any data = 3;
+    google.protobuf.Timestamp timestamp = 4;
+}

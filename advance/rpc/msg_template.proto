@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option go_package = "./";
+
+message Msg1 {
+    string id = 1;
+    string name = 2;
+    int64 length = 3;
+    // bytes表示[]byte
+    bytes content = 4;
+    map<string, int32> map1 = 5;
+    // repeated表示数组形式
+    repeated string kinds = 6;
+    bool available = 7;
+}
+
+enum Status {
+    Available = 0;
+    Unavailable = 1;
+}
+
+message Msg2 {
+    // 嵌套类型
+    Msg1 msg1 = 1;
+    // 类似联合类型
+    oneof type {
+        string a = 2;
+        string b = 3;
+    };
+    // 一个枚举类型
+    Status status = 4;
+}
