@@ -4,7 +4,7 @@
 // 	protoc        v3.19.3
 // source: msg_template.proto
 
-package __
+package rpc
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"

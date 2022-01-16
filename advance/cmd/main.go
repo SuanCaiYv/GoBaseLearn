@@ -1,7 +1,7 @@
 package main
 
-import "GoBaseLearn/advance/asm"
+import "GoBaseLearn/advance/rpc"
 
 func main() {
-	asm.RunAsm1()
+	rpc.RunRpc1()
 }
