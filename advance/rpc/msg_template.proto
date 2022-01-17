@@ -1,6 +1,7 @@
 syntax = "proto3";
 
-option go_package = "./";
+package rpc;
+option go_package = "advance/rpc";
 
 message Msg1 {
     string id = 1;

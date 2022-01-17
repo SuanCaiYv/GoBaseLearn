@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package rpc;
+option go_package = "advance/rpc";
+
+import "advance/rpc/result.proto";
+
+service EchoService {
+    rpc AppendStr (Result) returns (Result);
+}

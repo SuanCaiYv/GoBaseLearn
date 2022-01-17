@@ -1,11 +1,12 @@
 syntax = "proto3";
 
+package rpc;
+option go_package = "advance/rpc";
+
 import "google/protobuf/any.proto";
 import "google/protobuf/timestamp.proto";
 
-option go_package = "./";
-
-message result {
+message Result {
     int32 code = 1;
     string msg = 2;
     google.protobuf.Any data = 3;
