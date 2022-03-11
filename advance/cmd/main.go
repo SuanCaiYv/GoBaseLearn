@@ -1,7 +1,18 @@
 package main
 
-import "github.com/SuanCaiYv/GoBaseLearn/advance/rpc"
+import (
+	"fmt"
+)
 
 func main() {
-	rpc.RunRpc1()
+	fmt.Println(test())
+}
+
+var str = "aaa"
+
+func test() (v string) {
+	defer func(p *string) {
+		*p = str
+	}(&v)
+	return v
 }
