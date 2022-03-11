@@ -1,18 +1,26 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
-func main() {
-	fmt.Println(test())
+type T struct {
+	a int64
+	b int64
+	c int64
+	d int64
 }
 
-var str = "aaa"
+func main() {
+	v1 := test1()
+	v2 := test2()
+	fmt.Println(v1, v2)
+}
 
-func test() (v string) {
-	defer func(p *string) {
-		*p = str
-	}(&v)
+func test1() (t T) {
+	t = T{1, 2, 3, 4}
+	return t
+}
+
+func test2() T {
+	v := T{1, 2, 3, 4}
 	return v
 }
