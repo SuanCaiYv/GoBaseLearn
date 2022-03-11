@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type T struct {
 	a int64
@@ -10,9 +12,7 @@ type T struct {
 }
 
 func main() {
-	v1 := test1()
-	v2 := test2()
-	fmt.Println(v1, v2)
+	f()
 }
 
 func test1() (t T) {
@@ -23,4 +23,16 @@ func test1() (t T) {
 func test2() T {
 	v := T{1, 2, 3, 4}
 	return v
+}
+
+func f() {
+	defer func() {
+		fmt.Println("bbb")
+		fmt.Println(recover())
+	}()
+	defer func() {
+		fmt.Println("ccc")
+	}()
+	panic("aaa")
+	fmt.Println("ddd")
 }
