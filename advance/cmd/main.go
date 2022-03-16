@@ -12,6 +12,9 @@ type T struct {
 }
 
 func main() {
+	PtrSize := 4 << (^uintptr(0) >> 63)
+	uintptrMask := 1<<(8*PtrSize) - 1
+	fmt.Println(uintptrMask & -1314)
 	f()
 }
 
